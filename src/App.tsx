@@ -2,6 +2,7 @@ import MainPage from "./components/Page";
 import "./index.css";
 import logo from "./assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
 
@@ -76,6 +77,7 @@ export default function App() {
 
     return (
         <main className={`introScreen ${entering ? "introLeaving" : ""}`} onClick={handleEnter}>
+            <Analytics />
             <img src={logo} alt="Logo" className="introLogo" />
 
             <p className="introText">Click to Enter</p>
